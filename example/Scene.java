@@ -21,15 +21,20 @@ public class Scene {
 
         Geezer theGeezer = Geezer.getTheGeezer();
 
-        SteganographyClassLoader loader = new SteganographyClassLoader(
-                new URL("file:example.QuickSorter.png"));
+        // SteganographyClassLoader loader = new SteganographyClassLoader(
+        //         new URL("file:QSYSY.png"));
 
-        Class c = loader.loadClass("example.QuickSorter");
+        // Class c = loader.loadClass("example.QuickSorter");
+
+        SteganographyClassLoader loader = new SteganographyClassLoader(
+                new URL("file:example.SelectionSorter.png"));
+
+        Class c = loader.loadClass("example.SelectionSorter");
 
         // SteganographyClassLoader loader = new SteganographyClassLoader(
-        //         new URL("file:example.SelectionSorter.png"));
+        //         new URL("file:example.QuickSorter.png"));
 
-        // Class c = loader.loadClass("example.SelectionSorter");
+        // Class c = loader.loadClass("example.QuickSorter");
 
         Sorter sorter = (Sorter) c.newInstance();
 
